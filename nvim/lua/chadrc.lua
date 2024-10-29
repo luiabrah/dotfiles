@@ -4,14 +4,27 @@
 
 ---@type ChadrcConfig
 local M = {}
+M.ui = {
+  telescope = { style = "bordered" }, -- borderless / bordered
+  statusline = {
+    theme = "default",
+    separator_style = "arrow",
+  },
+}
 
 M.base46 = {
   theme = "gruvchad",
-
   -- hl_override = {
   -- 	Comment = { italic = true },
   -- 	["@comment"] = { italic = true },
   -- },
+}
+
+M.colorify = {
+  enabled = true,
+  mode = "virtual", -- fg, bg, virtual
+  virt_text = "󱓻 ",
+  highlight = { hex = true, lspvars = true },
 }
 
 return M
